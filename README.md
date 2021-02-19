@@ -3,6 +3,8 @@
 Docker command:
 docker run --restart always --shm-size=256m --user $(id -u):$(id -g) -p 3306:3306 -p 5903:5901 -p 6903:6901 -e VNC_RESOLUTION=1920x1080 -e VNC_PW=****** -e TIMEZONE="Asia/Tokyo" -e MYSQL_ROOT_PASSWORD=******* -v /home:/home/ --name  HIEU -it trunghieuqbvn/centos7-vnc-cuda10-cudnn7-mysql5.7 /bin/bash
 
+nvidia-docker run --restart always --shm-size=256m --user $(id -u):$(id -g) -p 5903:5901 -p 6903:6901 -e VNC_RESOLUTION=1920x1080 -e VNC_PW=****** -e TIMEZONE="Asia/Tokyo" --name TESTTTTTTTT -it trunghieuqbvn/cuda10.1-cudnn7-ubuntu16-vnc /bin/bash
+
 This repository contains a collection of Docker images with headless VNC environments.
 
 Each Docker image is installed with the following components:
